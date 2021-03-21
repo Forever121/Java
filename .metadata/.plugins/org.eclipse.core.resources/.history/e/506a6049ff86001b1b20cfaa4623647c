@@ -1,0 +1,23 @@
+package ex1;
+
+import java.util.Scanner;
+
+public class ex1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("请输入要转换的进制：");
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		System.out.println("请输入要转换的十进制数：");
+		int b = input.nextInt();
+		int c;
+		c=0;
+		for(int j=0;;j++) {
+			c=c*10+(b%a);
+			b=b/a;
+		}
+		System.out.println(c);
+	}
+
+}
