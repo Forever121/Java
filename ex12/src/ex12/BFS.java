@@ -19,17 +19,14 @@ public class BFS {
             {0,0,1,0,0,1,0,0},
             {0,0,0,1,1,0,0,0}};
         ArrayList<Integer> list1 = new ArrayList<>();
-        ArrayList<Integer> list2 = new ArrayList<>();
-        for(int i=0;i<adjMatrix.length;i++) {
-        	list2.add(0);
-        }
+        int[] list2 = {0,0,0,0,0,0,0,0};
         list1.add(n);
-        list2.set(n,1);
+        list2[n]=1;
         for(int i=0 ;i<adjMatrix.length;i++) {
         	for(int j=0;j<adjMatrix.length;j++) {
-        		if((adjMatrix[list1.get(i)][j]==1)&&(list2.get(j)==0)) {
+        		if((adjMatrix[list1.get(i)][j]==1)&&(list2[j]==0)) {
         			list1.add(j);
-        	        list2.set(j,1);
+        	        list2[j]=1;
         		}
         	}
         }
