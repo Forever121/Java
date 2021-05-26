@@ -38,5 +38,6 @@ public class BFS {
             else
             	System.out.println();
         }
+        input.close();
 	}
 }
