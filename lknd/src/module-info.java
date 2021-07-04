@@ -1,0 +1,2 @@
+module lknd {
+}
